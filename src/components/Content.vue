@@ -7,7 +7,7 @@
         <template slot="body">
            <h1> Gotcha! </h1>
           <div class="modal-body">
-            <video controls autoplay muted id="rick">
+            <video controls auto autoplay muted id="rick">
               <source src="../assets/rick.mp4" type="video/mp4">
             </video>
 
@@ -30,7 +30,7 @@
         </div>
 
           <br>
-          <button id="sign" @click="isShow = !isShow" >
+          <button id="sign" @click="isShow = !isShow; unmute()" >
 
             Get Tickets
           </button>
@@ -50,7 +50,13 @@ export default {
     SimpleModal
   }
   ,methods: {
+    unmute() {
+      var vid = document.getElementById('rick');
+      vid.muted = !vid.muted;
+    }
   }, mounted() {
+    var vid = document.getElementById('rick');
+    vid.play();
   },
   data() {
     return {
