@@ -1,9 +1,26 @@
 <template>
   <div id="content" class="container">
 
-    <simple-modal v-model="isShow" title="Modal Header">
-    <!-- TODO: here comes the Rickroll modal -->
-      <h1> Gotcha! Now go to ETHPrague </h1>
+
+    <simple-modal v-model="isShow" title="Modal Header" >
+
+
+        <template slot="body">
+           <h1> Gotcha! Now go to ETHPrague </h1>
+          <div class="modal-body">
+            <video controls autoplay id="rick">
+              <source src="../assets/rick.mp4" type="video/mp4">
+            </video>
+
+            <a href="https://ethprague.com/" target="_blank" class="modal-btn"> 
+              <button id="modal-btn-eth" @click="isShow = !isShow">
+                For real now, sign up for ETHPrague
+              </button>
+            </a>
+
+          </div>
+
+        </template>
     </simple-modal>
 
     <div class="hero row">
@@ -12,13 +29,12 @@
         <div>
           <h1> October 2022, Prague, CZ </h1>
         </div>
-        <a href="https://ethprague.com" target="_self">
+
           <br>
-          <button id="sign">
-<!--            @click="isShow = !isShow">-->
+          <button id="sign" @click="isShow = !isShow" >
+
             Get Tickets
           </button>
-        </a>
       </div>
 
     </div>
@@ -67,6 +83,46 @@ export default {
   margin-bottom: 1vh;
   width: 100%;
 }
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-btn {
+  margin-top: 30px;
+}
+
+#modal-btn-eth {
+
+}
+
+.modal-btn button {
+  border: 2px #000000 solid;
+  border-radius: 100px;
+  width: 100%;
+  white-space: pre-wrap;
+  font-size: 24px;
+  background:  #000000;
+  color: #FFFFFF;
+  height: 100%;
+  min-height: 60px;
+  padding: 15px 30px;
+  /*padding: 40px 40px 40px 40px;*/
+  /*filter: saturate(0);*/
+  /*!*opacity: 0.5*!*/
+}
+
+.modal-btn button:hover {
+  opacity: 1;
+  background: #FFFFFF;
+  color: #000000;
+  border: #000000 solid;
+}
+
+
 
 .stick {
   position: sticky;
