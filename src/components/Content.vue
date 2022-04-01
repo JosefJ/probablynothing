@@ -5,7 +5,7 @@
 <!-- TODO: here comes the Rickroll modal -->
         <template slot="body">
           <div class="modal-body">
-            <video controls autoplay>
+            <video controls autoplay id="rick">
               <source src="../assets/rick.mp4" type="video/mp4">
             </video>
 
