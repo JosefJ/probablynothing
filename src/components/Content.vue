@@ -2,13 +2,12 @@
   <div id="content" class="container">
 
 
-    <simple-modal v-model="isShow" title="Modal Header" >
-
+    <simple-modal v-model="isShow" >
 
         <template slot="body">
-           <h1> Gotcha! Now go to ETHPrague </h1>
+           <h1> Gotcha! </h1>
           <div class="modal-body">
-            <video controls autoplay id="rick">
+            <video controls autoplay muted id="rick">
               <source src="../assets/rick.mp4" type="video/mp4">
             </video>
 
