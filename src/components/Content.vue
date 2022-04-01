@@ -2,7 +2,8 @@
   <div id="content" class="container">
 
     <simple-modal v-model="isShow" title="Modal Header">
-<!-- TODO: here comes the Rickroll modal -->
+    <!-- TODO: here comes the Rickroll modal -->
+      <h1> Gotcha! Now go to ETHPrague </h1>
     </simple-modal>
 
     <div class="hero row">
@@ -11,9 +12,10 @@
         <div>
           <h1> October 2022, Prague, CZ </h1>
         </div>
-        <a href="" target="_blank">
+        <a href="https://ethprague.com" target="_self">
           <br>
-          <button id="sign" @click="isShow = !isShow">
+          <button id="sign">
+<!--            @click="isShow = !isShow">-->
             Get Tickets
           </button>
         </a>
