@@ -1,9 +1,12 @@
 <template>
   <div id="content" class="container">
 
+
     <simple-modal v-model="isShow" title="Modal Header" >
-<!-- TODO: here comes the Rickroll modal -->
+
+
         <template slot="body">
+           <h1> Gotcha! Now go to ETHPrague </h1>
           <div class="modal-body">
             <video controls autoplay id="rick">
               <source src="../assets/rick.mp4" type="video/mp4">
@@ -18,7 +21,6 @@
           </div>
 
         </template>
-
     </simple-modal>
 
     <div class="hero row">
@@ -27,8 +29,10 @@
         <div>
           <h1> October 2022, Prague, CZ </h1>
         </div>
+
           <br>
-          <button id="sign" @click="isShow = !isShow">
+          <button id="sign" @click="isShow = !isShow" >
+
             Get Tickets
           </button>
       </div>
