@@ -26,7 +26,7 @@
       <div class="twelve columns stick">
         <img id="Logo" src="../assets/dcivi-logo2.png">
         <div>
-          <h1> October 2022, Prague, CZ </h1>
+          <h1> June 2022, Prague, CZ </h1>
         </div>
 
           <br>
